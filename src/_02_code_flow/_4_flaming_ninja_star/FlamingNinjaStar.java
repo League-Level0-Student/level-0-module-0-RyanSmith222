@@ -15,6 +15,8 @@ public class FlamingNinjaStar {
 		rob.penDown();
 		// Set the robot speed to 100
 		rob.setSpeed(100);
+		
+		
 		// Set the robot window size to 800 x 800
 		rob.setWindowSize(800, 800);
 		
@@ -22,13 +24,19 @@ public class FlamingNinjaStar {
 		//         Set its start value to zero.
 		int count = 0;
 	       //  LOOP. Start a while loop to repeat all of the code below ONE time (we will change this later)
-				while(count < 1) {
+				while(count < 25) {
 					rob.turn(45);
 					rob.move(64);
 					rob.turn(-40);
+					
+					rob.setPenColor(73, 153, 640);
+					
 					rob.move(flameSize);
 					rob.turn(170);
 					rob.move(flameSize);
+					
+					rob.setPenColor(0, 0 ,0);
+					
 					rob.turn(64);
 					rob.move(baseSize);
 					count += 1;
